@@ -20,8 +20,7 @@ enum modes {
 class ViewController: UIViewController {
 
     @IBOutlet weak var label: UILabel!
-    var score:Int = 0
-    
+
     var labelString:String = "0"
     var currentMode:modes = modes.NO_MODE_SET
     var savedNum:Int = 0
