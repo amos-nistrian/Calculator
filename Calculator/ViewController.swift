@@ -14,6 +14,7 @@ enum modes {
     case MULTIPLICATION
     case DIVISION
     //case NEGATIVE
+    // comment
     case NO_MODE_SET
 }
 
