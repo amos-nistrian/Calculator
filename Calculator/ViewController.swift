@@ -9,13 +9,15 @@
 import UIKit
 
 enum modes {
+    case NO_MODE_SET
     case ADDITION
     case SUBTRACTION
     case MULTIPLICATION
     case DIVISION
     //case NEGATIVE
+    // case DECIMAL
     // comment
-    case NO_MODE_SET
+    
 }
 
 class ViewController: UIViewController {
@@ -23,7 +25,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var label: UILabel!
 
     var labelString:String = "0"
-    var currentMode:modes = modes.NO_MODE_SET
+    var currentMode:modes = .NO_MODE_SET
     var savedNum:Int = 0
     var lastButtonWasMode:Bool = false
     
@@ -35,6 +37,14 @@ class ViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func uodateText() {
+        
+    }
+    
+    func changeMode(newMode:modes) {
+        
     }
 
 
