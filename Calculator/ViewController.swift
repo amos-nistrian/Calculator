@@ -23,7 +23,7 @@ enum modes {
 class ViewController: UIViewController {
 
     @IBOutlet weak var label: UILabel!
-
+    
     var labelString:String = "0"
     var currentMode:modes = .NO_MODE_SET
     var savedNum:Int = 0
@@ -33,6 +33,22 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
+    @IBAction func didPressDecimalPoint(_ sender: Any) {
+    }
+    @IBAction func didPressEquals(_ sender: Any) {
+    }
+    @IBAction func didPressNegative(_ sender: Any) {
+    }
+    @IBAction func didPressClear(_ sender: Any) {
+    }
+    @IBAction func didPressDivide(_ sender: Any) {
+    }
+    @IBAction func didPressMultiply(_ sender: Any) {
+    }
+    @IBAction func didPressMinus(_ sender: Any) {
+    }
+    @IBAction func didPressPlus(_ sender: Any) {
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -40,6 +56,7 @@ class ViewController: UIViewController {
     }
     
     func uodateText() {
+        // updated after: any number press, clear, equals, negative, decimal
         
     }
     
