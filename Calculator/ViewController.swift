@@ -29,46 +29,77 @@ class ViewController: UIViewController {
     var savedNum:Int = 0
     var lastButtonWasMode:Bool = false
     var decimal:Bool = false
+    var negative:Bool = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
     
-    // TODO dont double up on decimals
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+    
     @IBAction func didPressDecimalPoint(_ sender: UIButton) {
         if (!decimal) {
             decimal = true
-            let negativeChar:String = "."
+            let decimalChar:String = "."
         
             // turn labelString into int to remove leading zero's
             let intLabelString:Int = Int(labelString)!
         
             // turn labelString back into string to append '.'
             labelString = "\(intLabelString)"
-            labelString = labelString.appending(negativeChar)
+            labelString = labelString.appending(decimalChar)
         
             label.text = labelString
         }
     }
     
-    // TODO dont double up on negatives
     @IBAction func didPressNegative(_ sender: UIButton) {
         let negativeChar:String = "-"
-        if (decimal) {
-            let dblLabelString:Double = Double(labelString)!
-            labelString = "\(dblLabelString)"
-            labelString = negativeChar.appending(labelString)
-            label.text = labelString
+        
+        if (!negative) {
+            if (decimal) {
+                labelString = negativeChar.appending(labelString)
+                
+                // update the label
+                label.text = labelString
+                negative = true
+            } else {
+                // turn labelString into int to remove leading zero's
+                let intLabelString:Int = Int(labelString)!
+        
+                // turn labelString back into string to append '-'
+                labelString = "\(intLabelString)"
+                labelString = negativeChar.appending(labelString)
+                
+                // update the label
+                label.text = labelString
+                negative = true
+            }
         } else {
-            // turn labelString into int to remove leading zero's
-            let intLabelString:Int = Int(labelString)!
-        
-            // turn labelString back into string to append '-'
-            labelString = "\(intLabelString)"
-            labelString = negativeChar.appending(labelString)
-        
-            label.text = labelString
+            if (decimal) {
+                // remove negative sign
+                let index = labelString.index(labelString.startIndex, offsetBy: 1)
+                labelString = labelString.substring(from: index)
+                
+                // update the label
+                label.text = labelString
+                negative = false
+            } else {
+                // turn labelString into int to remove leading zero's
+                var intLabelString:Int = Int(labelString)!
+                
+                // remove negative sign
+                intLabelString = intLabelString * -1
+                labelString = "\(intLabelString)"
+                
+                // update the label
+                label.text = labelString
+                negative = false
+            }
         }
     }
     
@@ -83,6 +114,7 @@ class ViewController: UIViewController {
         savedNum = 0
         lastButtonWasMode = false
         decimal = false
+        negative = false
     }
     
     @IBAction func didPressDivide(_ sender: Any) {
@@ -102,24 +134,16 @@ class ViewController: UIViewController {
     }
     
     @IBAction func didPressNumber(_ sender: UIButton) {
+        // retrieve label value of button
         let stringValue:String? = sender.titleLabel?.text
         labelString = labelString.appending(stringValue!)
         updateText()
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
     
-    // updated after: any number press, clear, equals, negative, decimal
+    // update label text after: any number press, clear, equals, negative, or decimal pressed
     func updateText() {
         if (decimal) {
-            guard let labelInt:Double = Double(labelString) else {
-                return
-            }
-            label.text = "\(labelInt)"
-
+            label.text = labelString
         } else {
             guard let labelInt:Int = Int(labelString) else {
                 return
@@ -131,7 +155,5 @@ class ViewController: UIViewController {
     func changeMode(newMode:modes) {
         
     }
-
-
 }
 
