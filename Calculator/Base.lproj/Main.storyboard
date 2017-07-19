@@ -36,6 +36,7 @@
                                 </state>
                                 <connections>
                                     <action selector="didHitAlien:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dcu-Y1-Eg0"/>
+                                    <action selector="didPressNumber:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fsx-Ei-ctB"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ehi-tg-MM6">
@@ -59,6 +60,7 @@
                                 </state>
                                 <connections>
                                     <action selector="didHitAlien:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sdQ-SM-Nm1"/>
+                                    <action selector="didPressNumber:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bng-A6-P3r"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ei4-4P-ebx">
@@ -70,6 +72,7 @@
                                 </state>
                                 <connections>
                                     <action selector="didHitAlien:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wOF-sa-Mbz"/>
+                                    <action selector="didPressNumber:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jqd-aP-1Mf"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zne-6s-qG3">
@@ -81,6 +84,7 @@
                                 </state>
                                 <connections>
                                     <action selector="didHitAlien:" destination="BYZ-38-t0r" eventType="touchUpInside" id="toK-y6-cZU"/>
+                                    <action selector="didPressNumber:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ptq-94-M6l"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lmc-xs-SDi">
@@ -92,6 +96,7 @@
                                 </state>
                                 <connections>
                                     <action selector="didHitAlien:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ASe-Zb-pT5"/>
+                                    <action selector="didPressNumber:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3nG-gR-2FC"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fdt-DX-bpv">
@@ -103,6 +108,7 @@
                                 </state>
                                 <connections>
                                     <action selector="didHitAlien:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GOq-1c-zmE"/>
+                                    <action selector="didPressNumber:" destination="BYZ-38-t0r" eventType="touchUpInside" id="v4N-Nc-Zga"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c62-DY-aPf">
@@ -114,6 +120,7 @@
                                 </state>
                                 <connections>
                                     <action selector="didHitAlien:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Va7-7z-lsk"/>
+                                    <action selector="didPressNumber:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0LJ-ro-woV"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cS4-cW-rFd">
@@ -125,6 +132,7 @@
                                 </state>
                                 <connections>
                                     <action selector="didHitAlien:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ZR5-fl-gUf"/>
+                                    <action selector="didPressNumber:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MkW-Jw-ZxW"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lqM-ji-Taf">
@@ -148,6 +156,7 @@
                                 </state>
                                 <connections>
                                     <action selector="didHitAlien:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hiS-cj-Qdh"/>
+                                    <action selector="didPressNumber:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0Zc-t7-d1k"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c4R-pP-ukv">
@@ -231,6 +240,7 @@
                                 </state>
                                 <connections>
                                     <action selector="didHitAlien:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mm1-44-o8b"/>
+                                    <action selector="didPressNumber:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tvw-oN-twG"/>
                                 </connections>
                             </button>
                         </subviews>

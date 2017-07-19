@@ -45,9 +45,11 @@ class ViewController: UIViewController {
     }
     @IBAction func didPressMultiply(_ sender: Any) {
     }
-    @IBAction func didPressMinus(_ sender: Any) {
+    @IBAction func didPressSubtract(_ sender: Any) {
     }
     @IBAction func didPressPlus(_ sender: Any) {
+    }
+    @IBAction func didPressNumber(_ sender: UIButton) {
     }
 
     override func didReceiveMemoryWarning() {
