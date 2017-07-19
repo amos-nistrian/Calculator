@@ -37,18 +37,19 @@ class ViewController: UIViewController {
     
     // TODO dont double up on decimals
     @IBAction func didPressDecimalPoint(_ sender: UIButton) {
-        decimal = true
-        let negativeChar:String = "."
+        if (!decimal) {
+            decimal = true
+            let negativeChar:String = "."
         
-        // turn labelString into int to remove leading zero's
-        let intLabelString:Int = Int(labelString)!
+            // turn labelString into int to remove leading zero's
+            let intLabelString:Int = Int(labelString)!
         
-        // turn labelString back into string to append '.'
-        labelString = "\(intLabelString)"
-        labelString = labelString.appending(negativeChar)
+            // turn labelString back into string to append '.'
+            labelString = "\(intLabelString)"
+            labelString = labelString.appending(negativeChar)
         
-        label.text = labelString
-
+            label.text = labelString
+        }
     }
     
     // TODO dont double up on negatives
